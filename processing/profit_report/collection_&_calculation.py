@@ -8,8 +8,7 @@ iso['РУССКОЕ НАЗВАНИЕ'] = iso['РУССКОЕ НАЗВАНИЕ'].
 iso['РУССКОЕ НАЗВАНИЕ'] = iso['РУССКОЕ НАЗВАНИЕ'].replace('Коста‐Рика', 'КостаРика')
 # тут забавная чепуха replace не мог заменить "-" на ""
 
-# функция для замен в spend под формат ISO, если появямся страны с "-",
-# скорее всего придется добавить сюда по аналогии
+# функция для замен в spend под формат ISO, если появятся страны с "-", скорее всего придется добавить сюда по аналогии
 def for_iso(df):
     df['Название страны'] = df['Название страны'].replace('США', 'Соединенные Штаты Америки')
     df['Название страны'] = df['Название страны'].replace('Киргизия', 'Киргизстан')
@@ -39,14 +38,14 @@ def what_we_want(spend, revenue):
     total['LTV'] = total['Total_revenue'] / total['Conversions']
     return total
 
-# путь к папке, где лежат твои пааочки со spends & revenues через "/" (на винде "\\")
+# путь к папке, где лежат твои папочки со spends & revenues через "/" (на винде "\\")
 path = 'C:/Users/AM/DATA_ANALYST/tests and so/Dudos/TA/revenue_and_spend'
 
 # для трех сеток, новые можно дописать
 for current_path, directs, files in walk(path):
     for file in files:
         # создаем полный путь к файлу
-        data_path = (f'{current_path}/{file}') # или data_path = (current_path+'/'+ file)
+        data_path = (f'{current_path}/{file}')
         print(data_path)
         # читаем данные
         if file.split('.')[0].lower() == "revenue":
