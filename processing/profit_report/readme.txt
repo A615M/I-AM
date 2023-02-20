@@ -26,9 +26,8 @@ LTV = Revenue/Conversions
 
 
 Так, смотри:
-Смотри, вот эти 2 команды установят нужные библиотеки:
+Смотри, так установить нужные библиотеки:
     pip install pandas
-    pip install os (может не пригодиться)
+   
 
 https://techberg.ru/kak-zapustit-skript-python-na-mac-uprostite-tehnologiyu - тут, как запускать на маке через терминал, не открывая даже.
-Потестишь - расскажи)
